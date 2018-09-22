@@ -41,21 +41,19 @@ public:
  */
     Permissions(QString p);
 
-    QString m_username;
-    QString m_group;
-    bool m_valid;
-    int m_value;
-
-    void parsePermissions(QString const &p);
     bool isValid();
     QString username();
     QString group();
     int value();
 
-/** invalidAccess() aborts the program if an attempt is made to access a parameter when the permissions string
- * is not valid
-*/
-    void invalidAccess();
+private:
+
+    void parsePermissions(QString const &p);
+
+    QString m_username;
+    QString m_group;
+    bool m_valid;
+    int m_value;
 
 };
 
