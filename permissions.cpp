@@ -22,7 +22,6 @@
 
 #include <QString>
 #include <QStringList>
-#include <QDebug>
 #include "permissions.h"
 
 Permissions::Permissions(QString p) :
