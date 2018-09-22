@@ -1,8 +1,7 @@
 cmake_minimum_required (VERSION 3.0 FATAL_ERROR)
 
 project(permissions)
-set(PERMISSIONS_VERSION 0.1.1b)
-
+set(PERMISSIONS_VERSION 0.1.1)
 
 set(QT_MIN_VERSION     "5.11.0")
 set(KF5_MIN_VERSION    "5.49.0")
@@ -16,12 +15,7 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
-# CMake includes
-include(KDEInstallDirs)
-include(KDECMakeSettings)
-include(KDECompilerSettings NO_POLICY_SCOPE)
-include(ECMInstallIcons)
-include(ECMSetupVersion)
+# CMake include(s)
 include(FeatureSummary)
 
 # QT packages
@@ -31,7 +25,7 @@ find_package(
 )
 
 # Source files to be included
-set ( PERMISSIONS_SOURCES
+set (PERMISSIONS_SOURCES
         permissions.cpp
         main.cpp
 )
