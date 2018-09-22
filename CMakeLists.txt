@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
 
-project(permissions)
+project(permissions LANGUAGES CXX)
 set(PERMISSIONS_VERSION 0.1.1)
 
 set(QT_MIN_VERSION     "5.11.0")
