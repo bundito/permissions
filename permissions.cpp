@@ -33,7 +33,7 @@ Permissions::Permissions(QString p) :
     parsePermissions(p);
 }
 
-void Permissions::parsePermissions(QString const &p) {
+void Permissions::parsePermissions(const QString& p) {
 
     QStringList segments = p.split(":");
 
@@ -53,7 +53,7 @@ void Permissions::parsePermissions(QString const &p) {
         m_valid = false;
         return;
     } else {
-        m_value = segments[2].toInt(&ok, 10);
+        m_value = octal;
     }
 
     // We have exactly three segments and the third is valid octal,
