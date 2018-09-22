@@ -25,9 +25,9 @@
 #include "permissions.h"
 
 Permissions::Permissions(QString p) :
+    m_username(),
+    m_group(),
     m_valid(true),
-    m_username(QString()),
-    m_group(QString()),
     m_value(0)
 {
     parsePermissions(p);

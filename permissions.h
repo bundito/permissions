@@ -41,9 +41,9 @@ public:
  */
     Permissions(QString p);
 
-    bool m_valid;
     QString m_username;
     QString m_group;
+    bool m_valid;
     int m_value;
 
     void parsePermissions(QString const &p);
