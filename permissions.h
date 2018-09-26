@@ -22,8 +22,9 @@
 #include <QString>
 
 /**
- * @brief The Permissions class takes a QString @p in the form of <user>:<group>:<permissions>, checks
- * it for validity, and makes the three components available indivdually.
+ * @brief The Permissions class takes a QString @p in the form of 
+ * <user>:<group>:<permissions>, checks it for validity, and makes the three
+ * components available indivdually.
  */
 
 class Permissions
@@ -32,8 +33,9 @@ class Permissions
 public:
 
 /** Constructor
- * Splits the string @p at the colon (":") into separate elements for <user>, <group>, and <value> (permissions), where
- * <value> is returned as an **octal** number.
+ * Splits the string @p at the colon (":") into separate elements for 
+ * <user>, <group>, and <value> (permissions), where<value> is returned as 
+ * an **octal** integer.
  */
     Permissions(QString p);
 
