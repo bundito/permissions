@@ -26,7 +26,6 @@
  * <user>:<group>:<permissions>, checks it for validity, and makes the three
  * components available indivdually.
  */
-
 class Permissions
 {
 
@@ -34,19 +33,20 @@ public:
 
 /** Constructor
  * Splits the string @p at the colon (":") into separate elements for 
- * <user>, <group>, and <value> (permissions), where<value> is returned as 
+ * <user>, <group>, and <value> (permissions), where <value> is returned as
  * an **octal** integer.
  */
     Permissions(QString p);
 
-    bool isValid();
-    QString username();
-    QString group();
-    int value();
+    bool isValid() const { return m_valid; }
+    QString username() const { return m_username; }
+    QString group() const { return m_group; }
+    int value() const { return m_value; }
+
 
 private:
 
-    void parsePermissions(QString const &p);
+    const void parsePermissions(QString const &p);
 
     QString m_username;
     QString m_group;

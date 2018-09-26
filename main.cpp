@@ -27,14 +27,14 @@ int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
 
-    QString testString = argv[1];
+    QString input = argv[1];
 
-    if (testString.isEmpty()) {
+    if (input.isEmpty()) {
         qDebug() << "Usage: permissions <user>:<group>:<permissions>";
         exit(0);
     }
 
-    Permissions test = testString;
+    Permissions test(input);
     qDebug() << "Valid? " << test.isValid();
     qDebug() << "User: " << test.username();
     qDebug() << "Group: " << test.group();

@@ -25,11 +25,12 @@ Permissions::Permissions(QString p) :
     m_group(),
     m_valid(true),
     m_value(0)
+
 {
     parsePermissions(p);
 }
 
-void Permissions::parsePermissions(const QString& p) {
+const void Permissions::parsePermissions(const QString& p) {
 
     QStringList segments = p.split(":");
 
@@ -62,21 +63,8 @@ void Permissions::parsePermissions(const QString& p) {
 
 }
 
-bool Permissions::isValid() {
-    return m_valid;
-}
 
-QString Permissions::username() {
-    return m_username;
-}
 
-QString Permissions::group() {
-    return m_group;
-}
-
-int Permissions::value() {
-    return m_value;
-}
 
 
 
